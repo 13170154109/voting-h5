@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://neon-light.local.com/debug.html#tds -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="http://neon-light.local.com/assets/images/favicon.ico">
+    <title></title>
+
+    <link type="text/css" rel="stylesheet/less" href="./debug_files/style.less"><style type="text/css" id="less:assets-css-style">/* iPhone 6 width */
+/* iPhone 6 height - Wechat bar = 1334 - 128 */
+/* iPhone 6 width */
+/* iPhone 6 height - Wechat bar = 750 - 104 */
+.layout-main {
+  height: 100%;
+  position: relative;
+  background: #000000;
+}
+.layout-main .rotate-landscape {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: #ffffff url(http://neon-light.local.com/assets/images/main/rotate-landscape.png) no-repeat center;
+  display: none;
+}
+.layout-main .rotate-portrait {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: #ffffff url(http://neon-light.local.com/assets/images/main/rotate-portrait.png) no-repeat center;
+  display: none;
+}
+.base-page {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.base-page.fit-on-height .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.base-page.fit-on-height .ratio-fix {
+  position: relative;
+  width: 100%;
+  /*background: #000000;*/
+}
+.base-page.fit-on-width {
+  /*overflow: auto;*/
+}
+.base-page.fit-on-width .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.base-page.fit-on-width .ratio-fix {
+  position: relative;
+  width: 100%;
+  background: #000000;
+}
+.base-page.portrait .ratio-fix {
+  padding-bottom: 160.8%;
+}
+.base-page.landscape .ratio-fix {
+  padding-bottom: 48.42578711%;
+}
+.page-home {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /*background: #000000;*/
+  background: url(http://neon-light.local.com/assets/images/home_bg.png) no-repeat center;
+  background-size: cover;
+}
+.page-home.fit-on-height .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-home.fit-on-height .ratio-fix {
+  position: relative;
+  width: 100%;
+  /*background: #000000;*/
+}
+.page-home.fit-on-width {
+  /*overflow: auto;*/
+}
+.page-home.fit-on-width .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-home.fit-on-width .ratio-fix {
+  position: relative;
+  width: 100%;
+  background: #000000;
+}
+.page-home.portrait .ratio-fix {
+  padding-bottom: 160.8%;
+}
+.page-home.landscape .ratio-fix {
+  padding-bottom: 48.42578711%;
+}
+.page-home .paper {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  /*background: #000000;*/
+  position: absolute;
+}
+.page-home .draw-btn {
+  width: 44.4%;
+  height: 21.641791044776117%;
+  position: absolute;
+  top: 74.95854063018243%;
+  left: 30%;
+  background: url(http://neon-light.local.com/assets/images/button.png) no-repeat center;
+  background-size: cover;
+}
+.page-home .button_1 {
+  width: 29.06666666666667%;
+  height: 17.495854063018243%;
+  position: absolute;
+  top: 76.53399668325042%;
+  left: 35%;
+  background: url(http://neon-light.local.com/assets/images/button_1.png) no-repeat center;
+  background-size: cover;
+}
+.page-home .button_2 {
+  width: 27.066666666666666%;
+  height: 15.837479270315091%;
+  position: absolute;
+  top: 76.3681592039801%;
+  left: 38.266666666666666%;
+  background: url(http://neon-light.local.com/assets/images/button_2.png) no-repeat center;
+  background-size: 100%;
+}
+.page-home .mw {
+  width: 11.733333333333333%;
+  height: 6.218905472636816%;
+  position: absolute;
+  color: #ffffff;
+  left: 20%;
+  font-size: 52.083333333333336%;
+  bottom: 4.1459369817578775%;
+  text-align: center;
+}
+.page-home .mw img {
+  width: 80%;
+}
+.page-home .logo {
+  width: 20.4%;
+  height: 6.467661691542288%;
+  position: absolute;
+  top: 4.1459369817578775%;
+  left: 4.266666666666667%;
+  background: #c32aff;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/logo.png);
+  -webkit-mask-size: cover;
+}
+.page-home .bottom_bg {
+  width: 100%;
+  height: 32.50414593698176%;
+  position: absolute;
+  top: 65.33996683250415%;
+  /*background:url(../images/bottom_bg.png);*/
+  background: #c32aff;
+  /*background-size:cover;*/
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/bottom_bg.png);
+  -webkit-mask-size: cover;
+}
+.page-home .draw {
+  width: 90%;
+  height: 82.08955223880598%;
+  position: absolute;
+  background: #c32aff;
+  /*-webkit-mask-image: url(../images/draw.png);*/
+  -webkit-mask-size: cover;
+}
+.page-home #draw1 {
+  left: 0%;
+  top: 0%;
+}
+.page-home #draw2 {
+  left: 13.333333333333334%;
+  top: 6.633499170812604%;
+}
+.page-home #draw3 {
+  left: 0%;
+  top: 20.729684908789388%;
+}
+.page-home #draw4 {
+  left: 13.333333333333334%;
+  top: 12.437810945273633%;
+}
+.page-home #draw5 {
+  left: 26.666666666666668%;
+  top: 5.804311774461028%;
+}
+.page-home #draw6 {
+  left: 1.3333333333333335%;
+  top: 8.291873963515755%;
+}
+.page-home #draw7 {
+  left: 13.333333333333334%;
+  top: 20.729684908789388%;
+}
+.page-home #draw8 {
+  left: 13.333333333333334%;
+  top: 16.58374792703151%;
+}
+.page-home #draw9 {
+  left: 2.666666666666667%;
+  top: 9.12106135986733%;
+}
+.page-home #draw10 {
+  left: 1.3333333333333335%;
+  top: 4.1459369817578775%;
+}
+.page-home .shape {
+  position: absolute;
+  background: #c32aff;
+  -webkit-mask-size: cover;
+}
+.page-home #shape1 {
+  width: 15.466666666666667%;
+  height: 9.203980099502488%;
+  left: 0%;
+  top: 24.875621890547265%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape1.png);
+}
+.page-home #shape2 {
+  width: 11.333333333333332%;
+  height: 3.482587064676617%;
+  left: 26.666666666666668%;
+  top: 16.58374792703151%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape2.png);
+}
+.page-home #shape3 {
+  width: 15.2%;
+  height: 6.633499170812604%;
+  left: 53.333333333333336%;
+  top: 8.291873963515755%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape3.png);
+}
+.page-home #shape4 {
+  width: 6.666666666666667%;
+  height: 4.39469320066335%;
+  left: 80%;
+  top: 16.58374792703151%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape4.png);
+}
+.page-home #shape5 {
+  width: 6.133333333333333%;
+  height: 3.814262023217247%;
+  left: 80%;
+  top: 29.850746268656714%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape5.png);
+}
+.page-home #shape6 {
+  width: 13.866666666666665%;
+  height: 9.203980099502488%;
+  left: 82.66666666666667%;
+  top: 43.117744610281925%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape6.png);
+}
+.page-home #shape7 {
+  width: 9.466666666666667%;
+  height: 4.892205638474295%;
+  left: 0%;
+  top: 49.75124378109453%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape7.png);
+}
+.page-home #shape8 {
+  width: 19.466666666666665%;
+  height: 11.691542288557214%;
+  left: 26.666666666666668%;
+  top: 58.043117744610285%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape8.png);
+}
+.page-home #shape9 {
+  width: 9.2%;
+  height: 5.140961857379768%;
+  left: 53.333333333333336%;
+  top: 66.33499170812604%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape9.png);
+}
+.page-home #shape10 {
+  width: 4.933333333333334%;
+  height: 2.321724709784411%;
+  left: 80%;
+  top: 58.043117744610285%;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/shape/shape11.png);
+}
+.page-draw {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: #000000;
+  background: url(http://neon-light.local.com/assets/images/draw_bg.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw.fit-on-height .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-draw.fit-on-height .ratio-fix {
+  position: relative;
+  width: 100%;
+  /*background: #000000;*/
+}
+.page-draw.fit-on-width {
+  /*overflow: auto;*/
+}
+.page-draw.fit-on-width .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-draw.fit-on-width .ratio-fix {
+  position: relative;
+  width: 100%;
+  background: #000000;
+}
+.page-draw.portrait .ratio-fix {
+  padding-bottom: 160.8%;
+}
+.page-draw.landscape .ratio-fix {
+  padding-bottom: 48.42578711%;
+}
+.page-draw .close-btn {
+  width: 11.733333333333333%;
+  height: 6.218905472636816%;
+  position: absolute;
+  color: #ffffff;
+  right: 1.3333333333333335%;
+  font-size: 52.083333333333336%;
+  top: 0.8291873963515755%;
+  text-align: center;
+}
+.page-draw .submit-btn {
+  width: 11.733333333333333%;
+  height: 6.218905472636816%;
+  position: absolute;
+  color: #ffffff;
+  left: 6.666666666666667%;
+  font-size: 52.083333333333336%;
+  bottom: 4.1459369817578775%;
+  text-align: center;
+}
+.page-draw .clear-btn {
+  width: 11.733333333333333%;
+  height: 6.218905472636816%;
+  position: absolute;
+  color: #ffffff;
+  right: 6.666666666666667%;
+  font-size: 52.083333333333336%;
+  bottom: 4.1459369817578775%;
+  text-align: center;
+}
+.page-draw #c {
+  position: absolute;
+  top: 0;
+  left: 4.5%;
+}
+.page-draw .bottom_bg {
+  width: 100%;
+  height: 32.50414593698176%;
+  position: absolute;
+  top: 65.33996683250415%;
+  /*background:url(../images/bottom_bg.png);*/
+  background-color: #9dff76;
+  /*background-size:cover;*/
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/bottom_BG.png);
+  -webkit-mask-size: cover;
+}
+.page-draw .logo {
+  width: 20.4%;
+  height: 6.467661691542288%;
+  position: absolute;
+  top: 4.1459369817578775%;
+  left: 4.266666666666667%;
+  background: #c32aff;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/logo.png);
+  -webkit-mask-size: cover;
+}
+.page-draw .write {
+  width: 42.13333333333333%;
+  height: 5.970149253731343%;
+  position: absolute;
+  top: 36%;
+  left: 29%;
+  background: url(http://neon-light.local.com/assets/images/write.png) no-repeat center;
+  background-size: 100%;
+}
+.page-draw .clear-btn {
+  width: 17.599999999999998%;
+  height: 9.618573797678277%;
+  position: absolute;
+  top: 55.223880597014926%;
+  left: 8.799999999999999%;
+  background: url(http://neon-light.local.com/assets/images/clear.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .submit-btn {
+  width: 16.266666666666666%;
+  height: 9.535655058043117%;
+  position: absolute;
+  top: 54.975124378109456%;
+  left: 73.86666666666667%;
+  background: url(http://neon-light.local.com/assets/images/submit.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .close-btn {
+  width: 33.733333333333334%;
+  height: 15.671641791044777%;
+  position: absolute;
+  top: 81.34328358208955%;
+  left: 33.66%;
+  background: url(http://neon-light.local.com/assets/images/back.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .storke {
+  width: 10%;
+  height: 6.218905472636816%;
+  position: absolute;
+  top: 73.71475953565506%;
+}
+.page-draw .storke1 {
+  left: 16.933333333333334%;
+  background: url(http://neon-light.local.com/assets/images/stroke1.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .storke2 {
+  left: 27.866666666666667%;
+  background: url(http://neon-light.local.com/assets/images/stroke2.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .storke3 {
+  left: 38.93333333333333%;
+  background: url(http://neon-light.local.com/assets/images/stroke3.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .storke4 {
+  left: 50.13333333333333%;
+  background: url(http://neon-light.local.com/assets/images/stroke4.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .storke5 {
+  left: 60.93333333333333%;
+  background: url(http://neon-light.local.com/assets/images/stroke5.png) no-repeat center;
+  background-size: cover;
+}
+.page-draw .storke6 {
+  left: 71.86666666666667%;
+  background: url(http://neon-light.local.com/assets/images/stroke6.png) no-repeat center;
+  background-size: cover;
+}
+.page-tds {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /*  background:url(../images/home_bg.png) no-repeat center;
+  background-size:cover;*/
+}
+.page-tds.fit-on-height .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-tds.fit-on-height .ratio-fix {
+  position: relative;
+  width: 100%;
+  /*background: #000000;*/
+}
+.page-tds.fit-on-width {
+  /*overflow: auto;*/
+}
+.page-tds.fit-on-width .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-tds.fit-on-width .ratio-fix {
+  position: relative;
+  width: 100%;
+  background: #000000;
+}
+.page-tds.portrait .ratio-fix {
+  padding-bottom: 160.8%;
+}
+.page-tds.landscape .ratio-fix {
+  padding-bottom: 48.42578711%;
+}
+.page-tds #bg1 {
+  width: 3000px;
+  height: 4860px;
+  background: url(http://neon-light.local.com/assets/images/bg1.png) no-repeat center;
+  background-size: cover;
+}
+.page-tds #bg2 {
+  width: 1500px;
+  height: 2430px;
+  background: url(http://neon-light.local.com/assets/images/bg2.png) no-repeat center;
+  background-size: cover;
+}
+.page-tds #bg3 {
+  width: 1500px;
+  height: 2430px;
+  background: url(http://neon-light.local.com/assets/images/bg3.png) no-repeat center;
+  background-size: cover;
+}
+.page-tds .logo {
+  width: 20.4%;
+  height: 6.467661691542288%;
+  position: absolute;
+  top: 4.1459369817578775%;
+  left: 4.266666666666667%;
+  background: #c32aff;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/logo.png);
+  -webkit-mask-size: cover;
+}
+.page-tds .draw-btn {
+  width: 44.4%;
+  height: 21.641791044776117%;
+  position: absolute;
+  top: 74.95854063018243%;
+  left: 30%;
+  background: url(http://neon-light.local.com/assets/images/button.png) no-repeat center;
+  background-size: cover;
+}
+.page-tds .button_1 {
+  width: 29.06666666666667%;
+  height: 17.495854063018243%;
+  position: absolute;
+  top: 76.53399668325042%;
+  left: 35%;
+  background: url(http://neon-light.local.com/assets/images/button_1.png) no-repeat center;
+  background-size: cover;
+}
+.page-tds .button_2 {
+  width: 27.066666666666666%;
+  height: 15.837479270315091%;
+  position: absolute;
+  top: 76.3681592039801%;
+  left: 38.266666666666666%;
+  background: url(http://neon-light.local.com/assets/images/button_2.png) no-repeat center;
+  background-size: 100%;
+}
+.page-tds .bottom_bg {
+  width: 1125px;
+  height: 588px;
+  position: absolute;
+  top: -450px;
+  background: #c32aff;
+  -webkit-mask-image: url(http://neon-light.local.com/assets/images/bottom_bg.png);
+  -webkit-mask-size: cover;
+}
+.page-screen {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: #000000;
+  width: 1024px !important;
+  height: 768px !important;
+}
+.page-screen.fit-on-height .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-screen.fit-on-height .ratio-fix {
+  position: relative;
+  width: 100%;
+  /*background: #000000;*/
+}
+.page-screen.fit-on-width {
+  /*overflow: auto;*/
+}
+.page-screen.fit-on-width .wrapper {
+  position: absolute;
+  /*background: #000000;*/
+}
+.page-screen.fit-on-width .ratio-fix {
+  position: relative;
+  width: 100%;
+  background: #000000;
+}
+.page-screen.portrait .ratio-fix {
+  padding-bottom: 160.8%;
+}
+.page-screen.landscape .ratio-fix {
+  padding-bottom: 48.42578711%;
+}
+.page-screen .live {
+  width: 794px;
+  height: 762px;
+  border: solid 3px red;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.page-screen .draw {
+  width: 225px;
+  height: 330px;
+  position: absolute;
+  background: #c32aff;
+  left: 800px;
+  top: -550px;
+  /*-webkit-mask-image: url(../images/draw.png);*/
+  -webkit-mask-size: cover;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.3;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  /* For some Androids */
+  -webkit-touch-callout: none;
+}
+</style>
+    <script async="" src="./debug_files/ga-analytics.js"></script><script>var less = less || {};
+    less.env = 'development';</script>
+    <script src="./debug_files/less.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config" src="./debug_files/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="howler" src="./debug_files/howler.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="three" src="./debug_files/three.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="TweenLite" src="./debug_files/TweenMax.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="./debug_files/underscore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./debug_files/jquery-2.1.4.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="TimelineLite" src="./debug_files/TimelineMax.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="DeviceOrientationControls" src="./debug_files/DeviceOrientationControls.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="TrackballControls" src="./debug_files/TrackballControls.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="CSS3DRenderer" src="./debug_files/CSS3DRenderer.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backbone" src="./debug_files/backbone.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="layoutmanager" src="./debug_files/backbone.layoutmanager.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./debug_files/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="./debug_files/app.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="managers/layout-manager" src="./debug_files/layout-manager.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="managers/router" src="./debug_files/router.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="managers/resize-manager" src="./debug_files/resize-manager.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="managers/tracker" src="./debug_files/tracker.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/layouts/main" src="./debug_files/main(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config/pages" src="./debug_files/pages.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/base/layout" src="./debug_files/layout.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/pages/home" src="./debug_files/home.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/pages/draw" src="./debug_files/draw.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/pages/tds" src="./debug_files/tds.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/pages/screen" src="./debug_files/screen.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="controllers/base/page" src="./debug_files/page.js"></script></head>
+<body>
+
+<div id="main" class="layout-main"><div class="wrapper">
+<div class="rotate-landscape" style="display: none;"></div>
+<div class="rotate-portrait" style="display: none;"></div>
+</div><div class="page-tds fit-on-height portrait" style="height: 603px; font-size: 48px;"><div class="wrapper" style="width: 375px; height: 603px; left: 0px;">
+<div class="ratio-fix">
+
+    <div id="container">
+
+
+
+
+    <div style="overflow: hidden; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; width: 375px; height: 667px; position: absolute; -webkit-perspective: 916.283719388117px; perspective: 916.283719388117px;"><div style="-webkit-transform-style: preserve-3d; transform-style: preserve-3d; width: 375px; height: 667px; -webkit-transform: translate3d(0px, 0px, 916.283719388117px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -3000, 1) translate3d(187.5px, 333.5px, 0px); transform: translate3d(0px, 0px, 916.283719388117px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -3000, 1) translate3d(187.5px, 333.5px, 0px);"><div id="draw1" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; display: block; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 792.808410644531, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 792.808410644531, 1); background: rgb(57, 255, 20);"></div><div id="draw2" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 673.139282226563, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 673.139282226563, 1); display: block; background: rgb(57, 255, 20);"></div><div id="draw3" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw4" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw5" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw6" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw7" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw8" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw9" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="draw10" class="draw" style="width: 375px; height: 550px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1); background: rgb(57, 255, 20);"></div><div id="bg1" style="position: absolute; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -2000, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -2000, 1);"></div><div id="bg2" style="position: absolute; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -1000, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -1000, 1);"></div><div id="bg3" style="position: absolute; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -300, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -300, 1);"></div><div class="bottom_bg" style="position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 500, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 500, 1); background-color: rgb(57, 255, 20);"></div><div id="shape9" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape10" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape11" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape12" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape13" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape14" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape15" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape16" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape17" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div><div id="shape18" class="shape" style="width: 100px; height: 100px; position: absolute; opacity: 0.977199; -webkit-transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 400, 0, 1); background: url(http://neon-light.local.com/assets/images/shape/shape2.png) 50% 50% no-repeat;"></div></div></div></div>
+    <div class="button_2"></div>
+	<div class="button_1"></div>
+    <div class="draw-btn"></div>
+    <div class="logo" style="opacity: 0.977199; background-color: rgb(57, 255, 20);"></div>
+</div>
+</div></div></div>
+
+<script data-main="assets/js/app/config/config" src="./debug_files/require.js"></script>
+
+
+
+</body></html>

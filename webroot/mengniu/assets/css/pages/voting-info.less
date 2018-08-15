@@ -1,0 +1,247 @@
+@import "../base/page";
+.page-voting-list{
+  .base-page;
+  overflow: auto;
+  height: 100%;
+  width:100%;
+  font-size: 14px;
+  //overflow-y: auto;
+  padding: 0px!important;
+  .bg{
+    height: 100%;
+    width:100%;
+    position: relative;
+    background:url("../images/img/bg.gif")no-repeat;
+    background-size: cover;
+    background-position: center top;
+    //overflow: auto;
+
+    //background-size: contain;
+
+
+    .top-messege{
+      padding: 24% 0% 0px 0%;
+      color: #fff;
+      .big-title,.small-title{
+        width: 80%;
+        margin: 0 auto;
+        text-align: right;
+      }
+      .person-img-name{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+        .img,.name{
+          width: 50%;
+        }
+
+
+
+        .name{
+          position: absolute;
+          left: 54%;
+          bottom: 0%;
+          p{
+            font-size: 16px;
+          }
+          >div{
+
+            font-size: 20px;
+            font-weight:  bold;
+
+          }
+
+        }
+      }
+    }
+
+  }
+  .user-information{
+    position: relative;
+    z-index: 20;
+    //padding-top: 35%;
+    padding: 2% 0% 0px 0%;
+    color: #fff;
+    //height: calc(~"85% - 250px");
+    height: calc(~"85% - 250px");
+    //background:url("../uploads/p1.jpg")no-repeat;
+    //background-size: cover;
+    //
+    .part-information{
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      overflow-y: auto;
+      .title1,.title2,.title3{
+        font-size: 26px;
+      }
+      .year{
+        position: absolute;
+        font-size: 12px;
+        transform: scale(0.8);
+        top: 33px;
+        left: -9px;
+      }
+      .xuanyan{
+        padding-left: 9%;
+      }
+      .user-word{
+        width: 76%;
+        margin: 20px auto;
+        position: relative;
+      }
+    }
+    .line{
+      width: 76%;
+      margin: 0 auto;
+      border: 0.5px dashed #fff;
+    }
+    .des1,.des2,.des3{
+      width: 88%;
+    }
+  }
+
+
+
+  .part-information{
+    width: 100%;
+    >div{
+      .photo-img ,.person-self-info{
+        width: 50%;
+      }
+
+      .person-self-info{
+      padding-left: 30px;
+        padding-right: 12%;
+        >div{
+          width: 100%;
+        }
+    }
+    }
+
+  .votes-info-des2,.votes-info-des3{
+    margin-top: 50px;
+  }
+  }
+
+
+
+  .btn-back{
+    width: 20%;
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    z-index: 200;
+  }
+  .btn-voting{
+    width: 15%;
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    //top: 16%;
+    z-index: 200;
+  }
+
+  .change-page{
+    width: 70%;
+    //position: absolute;
+    //bottom: -56%;
+    //left:14%;
+    //z-index: 200;
+    //width: 25%;
+    //position: absolute;
+    //bottom: 6%;
+    >div{
+      width: 25%;
+      position: fixed;
+      bottom: 2%;
+      z-index: 200;
+    }
+    .btn-prev{
+      left:14%;
+    }
+    .btn-next{
+      right:14%;
+    }
+  }
+
+}
+
+
+
+
+//遮罩层样式
+.page-voting-tan{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 200;
+  display: none;
+  background: rgba(0,0,0,0.6);
+
+  .voting-tan{
+    width: 100%;
+    height: 100%;
+    background:url("../images/img/detail.png")no-repeat;
+    //background:url("../images/img/over.jpg")no-repeat;
+    //background-size: contain;
+    background-size: cover;
+    background-position:center;
+    //display: none;
+
+    >div{
+      width: 30%;
+      //height: 70px;
+      //text-align: center;
+      //line-height: 30px;
+      //border-radius: 15px;
+      //border: 1px solid #171f83;
+
+      height: 90px;
+      //background-color: #f00000;
+      position: absolute;
+      bottom: 0%;
+    }
+    .button-img-part {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      padding: 5% 0px;
+      height: auto;
+    }
+    .info-btn{
+      width: 100%;
+      height: 100%;
+      background:url("../images/img/voting-info-top.gif") no-repeat;
+      //background-size: cover;
+      background-position-x: center;
+      background-size: 100%;
+      background-position-y: 100px;
+
+      .btn-close{
+        margin: 0 auto;
+      }
+      .btn-sure{
+        left:10%;
+        position: absolute;
+        height: 50px;
+        width: 110px;
+        bottom: 6%;
+      }
+      .btn-back{
+        right:10%;
+        position: absolute;
+        height: 50px;
+        width: 110px;
+        bottom: 6%;
+      }
+    }
+  }
+
+
+
+}
+

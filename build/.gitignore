@@ -1,0 +1,19 @@
+/npm-debug.log
+
+# 忽略打包文件
+/build/node_modules
+
+/.user.ini
+
+# 忽略运行时日志文件
+/app/runtime/
+/assets/yii/
+
+# 忽略编辑器文件
+.idea/
+
+# Mac DS_Store Files
+
+.DS_Store
+
+_MACOSX/

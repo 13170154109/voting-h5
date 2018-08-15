@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <title>Share</title>
+
+</head>
+<body>
+
+
+<div id="main">
+Share
+</div>
+
+<script src="jquery-2.1.4.min.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script>
+
+var host = window.location.host;
+
+var shareUrlFd = "http://" + host + "/?utm_source=wechat_share&utm_medium=share_fd&utm_campaign=roadshow";
+var shareUrlTl = "http://" + host + "/?utm_source=wechat_share&utm_medium=share_tl&utm_campaign=roadshow";
+
+
+var shareDataFriend = {
+    title: '选出你心中的世界杯大使',
+    desc: '为你的世界杯大使投上宝贵的一票',
+    link: shareUrlFd,
+    imgUrl: "http://" + host + "/wechat/demo/share.jpg",
+    success: function () {
+
+    }
+};
+var shareDataTimeLine = {
+    title: '选出你心中的世界杯大使',
+    desc: '为你的世界杯大使投上宝贵的一票',
+    link: shareUrlTl,
+    imgUrl: "http://" + host + "/wechat/demo/share.jpg",
+    success: function () {
+
+    }
+};
+
+
+
+$.ajax({
+    url: '/wechat/api/share.php',
+    data: {url: document.location.href.split("#")[0]},
+    dataType: "json",
+    cache: false,
+    success: function (data) {
+
+        wx.config({
+            "debug": false,
+            "appId": data.appId,
+            "timestamp": data.timestamp,
+            "nonceStr": data.nonceStr,
+            "signature": data.signature,
+            "jsApiList": ["onMenuShareTimeline","onMenuShareAppMessage","onMenuShareQQ","onMenuShareWeibo","onMenuShareQZone"]
+        });
+
+        wx.ready(function () {
+
+            wx.onMenuShareAppMessage(shareDataFriend);
+            wx.onMenuShareTimeline(shareDataTimeLine);
+
+        });
+
+    },
+    error: function (XHR, textStatus, errorThrown) {
+
+    }
+});
+
+
+
+</script>
+
+
+</body>
+</html>

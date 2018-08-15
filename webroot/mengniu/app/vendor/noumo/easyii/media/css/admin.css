@@ -1,0 +1,134 @@
+
+
+#wrapper .table {
+    table-layout: fixed;
+}
+#wrapper .table th{
+    font-size: 13px;
+    color: #565656;
+}
+#wrapper .table td{
+    font-size: 13px;
+}
+#wrapper .table td.control{
+    vertical-align: middle;
+    text-align: right;
+}
+#wrapper .table td.status{
+    vertical-align: middle;
+    text-align: center;
+}
+#wrapper .table td.vtop{
+    vertical-align: top;
+}
+
+#wrapper .switcher{
+    border: none;
+    background: #b3b8c3;
+    color: #FFF;
+    height: 20px;
+    min-width: 40px;
+    font-size: 11px;
+    border-radius: 10px;
+    padding: 1px;
+}
+#wrapper .switcher .slider{
+    background: #f0f3f3;
+    height: 18px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+#wrapper .switcher.is-active{
+    background: #1ab394;
+}
+#wrapper .switcher .textNo{
+    color: #fff;
+}
+
+
+#wrapper .help-block{
+    color: #ed5565;
+}
+
+
+.btn-default {
+    background-color: #ffffff;
+    border-color: #c2c2c2;
+    color: #676A72;
+}
+
+/*--------------- HELPERS ---------------*/
+
+h4{
+    text-transform: uppercase;
+    font-size: 24px;
+
+    color: #555;
+}
+h4 b{
+    font-weight: 400;
+}
+
+.confirm-delete{
+    color: #ed5565 !important;
+}
+.color-red{
+    color: #ed5565;
+}
+.font-16 {
+    font-size: 16px;
+}
+.font-12 {
+    font-size: 12px;
+}
+.font-10 {
+    font-size: 10px;
+}
+
+#notify-alert {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 300px;
+    z-index: 999;
+}
+.smooth {
+    color: #aaa;
+}
+.dashed-link:before{
+    font-family: 'Glyphicons Halflings';
+    content: "\e252";
+    font-size: 10px;
+    margin-right: 4px;
+}
+.dashed-link.collapsed:before{
+    content: "\e250";
+}
+.dashed-link:hover, .dashed-link:focus{
+    text-decoration: none;
+    color: #333;
+}
+
+
+.badge {
+    margin-right: 8px;
+}
+
+.badge a  {
+    font-size: 12px;
+    padding: 5px;
+    color: #5e5e5e;
+}
+
+.badge-primary a  {
+    color: #ffffff;
+}
+
+.search-group {
+    margin-right: 10px;
+}
+
+.search-group .btn-default {
+    height: 33px;
+}
