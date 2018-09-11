@@ -34,7 +34,7 @@ define(["app", "controllers/base/page"],
                 //     .to(btn1Img,0.1,{"transform":"rotate(4deg)"})
                 //     .to(btn1Img,0.1,{"transform":"rotate(-4deg)"})
                 //     .to(btn1Img,0.1,{"transform":"rotate(4deg)"})
-                //     .to(btn1Img,0.1,{"transform":"rotate(-4deg)"})
+                //     .to(btn1Img,0.1,{"transform":"rotate(-4deg)"}
                 //     .to(btn1Img,0.1,{"transform":"rotate(4deg)"})
                 //     .to(btn1Img,0.4,{"transform":"rotate(-4deg)"})
                 //     .to(btn1Img,0.4,{"transform":"rotate(4deg)"});
@@ -56,6 +56,7 @@ define(["app", "controllers/base/page"],
 
                 // 点击跳转事件至排行榜
                 console.log($("#btn-voting-list2"));
+                console.log(12133)
                 $("#btn-voting-list2").on("click",function () {
                     app.router.goto('contestants-list');
                 })
